@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var animateOn: Bool = false
+    @State private var pizza: [AddIngredient] = []
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -17,10 +18,15 @@ struct HomeView: View {
             
             PizzaImage(name: "margarita")
             
+            
             AddIngredient(name: "cheese", animateOn: $animateOn)
+
+            AddIngredient(name: "Сhampignen", animateOn: $animateOn)
             
             ButtonApp {
+                
                 animateOn.toggle()
+                
             }
         }
     }
